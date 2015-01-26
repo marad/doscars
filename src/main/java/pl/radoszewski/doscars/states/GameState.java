@@ -43,12 +43,14 @@ public class GameState extends BasicGameState {
         mapEntity.addComponent(new RenderInfo(background));
         mapEntity.addToWorld();
 
+        float carScale = 0.4f;
+
         audi = new Image("vehicle/audi.png");
-        audi.setCenterOfRotation(audi.getWidth()/4, audi.getHeight()/4);
+        audi.setCenterOfRotation(audi.getWidth()/2 * carScale, audi.getHeight()/2 * carScale);
 
         Entity entity = world.createEntity();
         entity.addComponent(new RenderInfo(audi));
-        entity.addComponent(new Transform(100, 100, 90, 0.5f));
+        entity.addComponent(new Transform(100, 100, 90, carScale));
         entity.addComponent(new Controlls(
                 Input.KEY_UP, Input.KEY_DOWN,
                 Input.KEY_LEFT, Input.KEY_RIGHT,
@@ -58,11 +60,11 @@ public class GameState extends BasicGameState {
 
 
         Image viper = new Image("vehicle/black_viper.png");
-        viper.setCenterOfRotation(viper.getWidth()/4, viper.getHeight()/4);
+        viper.setCenterOfRotation(viper.getWidth()/2 * carScale, viper.getHeight()/2 * carScale);
 
         Entity viperEntity = world.createEntity();
         viperEntity.addComponent(new RenderInfo(viper));
-        viperEntity.addComponent(new Transform(200, 200, 0, 0.5f));
+        viperEntity.addComponent(new Transform(200, 200, 0, carScale));
         viperEntity.addComponent(new Controlls(
                 Input.KEY_W, Input.KEY_S,
                 Input.KEY_A, Input.KEY_D,

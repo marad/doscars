@@ -14,7 +14,7 @@ public class DoscarsMain {
         try {
             AppGameContainer container;
             container = new AppGameContainer(new Game());
-            container.setDisplayMode(800, 600, false);
+            container.setDisplayMode(768, 768, false);
             container.start();
         } catch (SlickException ex) {
             ex.printStackTrace();

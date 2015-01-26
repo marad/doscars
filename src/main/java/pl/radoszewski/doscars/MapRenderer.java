@@ -29,6 +29,8 @@ public class MapRenderer {
             }
         }
 
+        g.drawImage(crate, 128, 128);
+
         g.flush();
         return result;
     }
