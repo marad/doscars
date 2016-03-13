@@ -4,7 +4,7 @@ name := "slick-game-archetype"
 
 version := "1.0"
 
-scalaVersion := "2.11.4"
+scalaVersion := "2.11.8"
 
 mainClass in (Compile, run) := Some("pl.radoszewski.doscars.DoscarsMain")
 
@@ -26,7 +26,7 @@ unmanagedBase := baseDirectory.value / "lib"
 
 fork in run := true
 
-packageOptions in (Compile, packageBin) += 
+packageOptions in (Compile, packageBin) +=
     Package.ManifestAttributes( java.util.jar.Attributes.Name.CLASS_PATH -> "" )
 
 assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)

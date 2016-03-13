@@ -19,8 +19,8 @@ public class Game extends StateBasedGame {
         this.addState(new MenuState());
         this.addState(new GameState());
 
-        this.enterState(SPLASHSCREEN);
-//        this.enterState(GAME);
+//        this.enterState(SPLASHSCREEN);
+        this.enterState(GAME);
     }
 
     public static final int SPLASHSCREEN = 0;
